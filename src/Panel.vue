@@ -1,6 +1,6 @@
 <template>
   <div :class="['panel',panelType]">
-    <div :class="['panel-heading',{'accordion-toggle':inAccordion}]" @click.prevent="inAccordion&&toggle()">
+    <div :class="['panel-heading',{'accordion-toggle':inAccordion, 'opened':open}]" @click.prevent="inAccordion&&toggle()">
       <slot name="header"><h4 class="panel-title">{{ header }}</h4></slot>
     </div>
     <transition
